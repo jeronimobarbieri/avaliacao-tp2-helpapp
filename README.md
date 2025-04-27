@@ -68,6 +68,9 @@ Diagrama Banco de Dados
 Tabelas e dados populados
 ![Tabela Banco de Dados](https://github.com/user-attachments/assets/6a278f00-7ef3-4adb-8300-5271a98f6969)
 
+Métricas de correção
+![Sucesso Métricas](https://github.com/user-attachments/assets/e39910a0-a249-47e7-9a91-8a5e8bf37b0c)
+
 
 
 # 👨‍💻 Dados do aluno
