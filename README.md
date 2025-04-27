@@ -66,7 +66,8 @@ Diagrama Banco de Dados
 ![Avaliacao_DbHelpApp](https://github.com/user-attachments/assets/59726947-89d5-4b93-bec4-b97b66a06c84)
 
 Tabelas e dados populados
-![Tabela Banco de Dados](https://github.com/user-attachments/assets/ec47c939-bbc6-474a-9881-e07d41f095f4)
+![Tabela Banco de Dados](https://github.com/user-attachments/assets/6a278f00-7ef3-4adb-8300-5271a98f6969)
+
 
 
 # 👨‍💻 Dados do aluno
