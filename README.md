@@ -7,73 +7,101 @@ Este repositório contém minha entrega referente à avaliação técnica basead
 
 ## ✅ Objetivo
 
-Implementar os repositórios `Category` e `Product` seguindo os padrões da Clean Architecture, aplicar a migration `Initial` e conectar a aplicação com uma instância de SQL Server no Azure.
+Este projeto tem como objetivo implementar os repositórios Category e Product seguindo os padrões da Clean Architecture, aplicar a migration Initial e conectar a aplicação a uma instância local do SQL Server, utilizando o SQL Server Management Studio (SSMS) para gerenciamento.
 
 ---
 
 ## 🚀 Funcionalidades implementadas
 
-- [x] Repositórios `CategoryRepository` e `ProductRepository`
-- [x] Configurações com `EntityTypeConfiguration` para `Category` e `Product`
-- [x] Injeção de dependência configurada (`DependencyInjectionAPI`)
-- [x] Migration `Initial` criada com `HasData()` para categorias
-- [x] Banco de dados SQL Server criado no Azure
-- [x] Migration aplicada com sucesso no Azure via `dotnet ef database update`
+✅ Repositórios CategoryRepository e ProductRepository criados e implementados.
+
+✅ Configurações EntityTypeConfiguration para as entidades Category e Product.
+
+✅ Injeção de dependência configurada na DependencyInjectionAPI.
+
+✅ Migration Initial criada, utilizando HasData() para inserção de dados iniciais de categorias.
+
+✅ Banco de dados criado no SQL Server via SSMS.
+
+✅ Migration aplicada com sucesso no banco de dados usando o console do Visual Studio 2022.
 
 ---
+
 # 🔧 Comandos utilizados
+
 ## Criação da migration
-dotnet ef migrations add Initial --project Infra.Data --startup-project WebAPI
 
-## Aplicação no banco de dados (Azure)
-dotnet ef database update --project Infra.Data --startup-project WebAPI
+Add-Migration Initial
 
+## Aplicação no banco de dados local
 
-## Aplicação no banco de dados (Azure)
-dotnet ef database update --project Infra.Data --startup-project WebAPI
+Update-Databse
 
 # 🔗 String de conexão (mascarada)
 
 "ConnectionStrings": {
-  "DefaultConnection": "Server=tcp:servidor-sql-aluno.database.windows.net,1433;Initial Catalog=NomeDoBanco;Persist Security Info=False;User ID=aluno_azure;Password=********;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+"DefaultConnection": "Data Source=JUNIOR\\SQLEXPRESS;Initial Catalog=avaliacao_dbhelpapp;Integrated Security=True;Pooling=False;Encrypt=True;Trust Server Certificate=True"
 }
 
-# ☁️ Configuração no Azure
-SQL Server criado no portal Azure
+# ☁️ Configuração no Banco de Dados Local
 
-Banco de dados nomeado: avaliacao_tp2_aluno
+O comando CREATE DATABASE foi usado para a criação do banco de dados
 
-IP local autorizado no firewall
-
-Autenticação SQL ativada
+Banco de dados nomeado: avaliacao_dbhelpapp
 
 Migration aplicada com sucesso diretamente do Visual Studio Terminal
 
 # 🖼️ Prints de evidência (opcional)
+
 Insira prints aqui comprovando:
 
-Aplicação bem-sucedida da migration no Azure
+Testes funcionando
+![Testes Corretos](https://github.com/user-attachments/assets/2ba8cdf9-c578-49a7-9ad2-7c67ef6dba0b)
+
+
+Aplicação bem-sucedida da migration no banco de dados local
+![Add-Migration](https://github.com/user-attachments/assets/8a7dd7e6-90c4-42cd-a435-b292567e7d41)
+
+Diagrama Banco de Dados
+![Avaliacao_DbHelpApp](https://github.com/user-attachments/assets/59726947-89d5-4b93-bec4-b97b66a06c84)
 
 Tabelas e dados populados
+![Tabela Banco de Dados](https://github.com/user-attachments/assets/6a278f00-7ef3-4adb-8300-5271a98f6969)
+
+Métricas de correção
+![Sucesso Métricas](https://github.com/user-attachments/assets/e39910a0-a249-47e7-9a91-8a5e8bf37b0c)
+
+
 
 # 👨‍💻 Dados do aluno
-Nome: [Seu Nome Aqui]
-Curso: Desenvolvimento de Sistemas – 3º Semestre
+
+Nome: Jerônimo Barbieri Junior
+Curso: Desenvolvimento de Software Multiplataforma – 3º Semestre
 
 Professor: Victor Icoma
 
-Branch da entrega: avaliacao-githubaluno
+Branch da entrega: avaliacao-jeronimobarbieri
 
 ## 🧱 Estrutura da aplicação
 
-```bash
-📦 src
- ┣ 📂 Domain
- ┣ 📂 Application
- ┣ 📂 Infra
- ┃ ┣ 📂 Data
- ┃ ┃ ┣ 📂 Migrations
- ┃ ┃ ┣ 📂 Repositories
- ┃ ┃ ┗ 📂 EntityConfiguration
- ┗ 📂 WebAPI
+HelpApp.sln
+┣ 📂 HelpApp.API
+┣ 📂 HelpApp.Application
+┣ 📂 HelpApp.Domain
+┣ 📂 HelpApp.Infra.Data
+┃ ┣ 📂 Context
+┣ ┣ 📂 EntityConfiguration
+┣ ┣ 📂 Migrations
+┃ ┃ 📂 Repositories
+┃ 📂 HelpApp.Infra.IoC
 
+
+# 📝 Observações
+
+Todos os campos obrigatórios foram preenchidos no HasData().
+
+A classe DesignTimeDbContextFactory foi usada para facilitar o debug de erros durante o desenvolvimento.
+
+As migrations foram aplicadas diretamente no SQL Server local com sucesso.
+
+```
