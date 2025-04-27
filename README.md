@@ -55,9 +55,19 @@ Migration aplicada com sucesso diretamente do Visual Studio Terminal
 
 Insira prints aqui comprovando:
 
+Testes funcionando
+![Testes Corretos](https://github.com/user-attachments/assets/2ba8cdf9-c578-49a7-9ad2-7c67ef6dba0b)
+
+
 Aplicação bem-sucedida da migration no banco de dados local
+![Add-Migration](https://github.com/user-attachments/assets/8a7dd7e6-90c4-42cd-a435-b292567e7d41)
+
+Diagrama Banco de Dados
+![Avaliacao_DbHelpApp](https://github.com/user-attachments/assets/59726947-89d5-4b93-bec4-b97b66a06c84)
 
 Tabelas e dados populados
+![Tabela Banco de Dados](https://github.com/user-attachments/assets/ec47c939-bbc6-474a-9881-e07d41f095f4)
+
 
 # 👨‍💻 Dados do aluno
 
@@ -81,9 +91,9 @@ HelpApp.sln
 ┃ ┃ 📂 Repositories
 ┃ 📂 HelpApp.Infra.IoC
 
-```
 
-📝 Observações
+# 📝 Observações
+
 Todos os campos obrigatórios foram preenchidos no HasData().
 
 A classe DesignTimeDbContextFactory foi usada para facilitar o debug de erros durante o desenvolvimento.
